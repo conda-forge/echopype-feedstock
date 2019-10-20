@@ -11,24 +11,26 @@ source:
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
-    - pip
     - python
+    - pip
   run:
-    - arlpy
-    - click
-    - matplotlib
-    - netCDF4
+    - python
     - numpy
     - pandas
-    - pynmea2
-    - python
-    - pytz
     - scipy
+    - matplotlib-base
+    - netcdf4
     - xarray
+    - pytz
+    - pynmea2
+    - click
+    - arlpy
+    - sphinx-automodapi
+    - numpydoc
 
 test:
   imports:
@@ -36,7 +38,7 @@ test:
 
 about:
   home: https://github.com/OSOceanAcoustics/echopype
-  license: Apache Software
+  license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
   summary: Enhancing interoperability and scalability in analyzing water column sonar data.
