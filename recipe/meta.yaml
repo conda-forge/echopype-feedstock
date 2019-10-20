@@ -18,15 +18,17 @@ requirements:
     - pip
     - python
   run:
-    - python
+    - arlpy
     - click
-    - numpy
-    - pandas
-    - scipy
     - matplotlib
     - netCDF4
-    - xarray
+    - numpy
+    - pandas
+    - pynmea2
+    - python
     - pytz
+    - scipy
+    - xarray
 
 test:
   imports:
