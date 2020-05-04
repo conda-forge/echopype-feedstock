@@ -19,7 +19,7 @@ requirements:
     - python
   run:
     - python
-    - matplotlib
+    - matplotlib-base
     - netCDF4
     - numpy
     - pandas
