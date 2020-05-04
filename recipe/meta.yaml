@@ -19,14 +19,15 @@ requirements:
     - python
   run:
     - python
-    - click
-    - numpy
-    - pandas
-    - scipy
     - matplotlib
     - netCDF4
-    - xarray
+    - numpy
+    - pandas
+    - pynmea2
     - pytz
+    - scipy
+    - xarray
+    - zarr
 
 test:
   imports:
@@ -34,7 +35,7 @@ test:
 
 about:
   home: https://github.com/OSOceanAcoustics/echopype
-  license: Apache Software
+  license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
   summary: Enhancing interoperability and scalability in analyzing water column sonar data.
