@@ -1,4 +1,4 @@
-{% set version = "0.1.21" %}
+{% set version = "0.3.2" %}
 
 package:
   name: echopype
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/e/echopype/echopype-{{ version }}.tar.gz
-  sha256: d711d4ac6c94e84e1488e01bb80abaca412f6bf58d4b86d7f46bf4985d29a728
+  sha256: 8c5bfa293ab074aa3b59695e968fd8a8b843ce3cf73e2cdc01b54f6b855194f4
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
