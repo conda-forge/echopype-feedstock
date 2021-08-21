@@ -38,7 +38,7 @@ requirements:
     - s3fs
     - requests
     - aiohttp
-    - typing-extensions~=3.10
+    - typing-extensions ~=3.10
 
 test:
   imports:
