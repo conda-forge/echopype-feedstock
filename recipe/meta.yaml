@@ -35,7 +35,7 @@ requirements:
     - xarray
     - zarr
     - fsspec
-    - s3fs ==2021.10.1
+    - s3fs ==2021.11.0
     - requests
     - aiohttp
     - typing-extensions ~=3.10
