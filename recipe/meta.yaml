@@ -1,4 +1,4 @@
-{% set version = "0.5.5" %}
+{% set version = "0.5.6" %}
 
 package:
   name: echopype
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/e/echopype/echopype-{{ version }}.tar.gz
-  sha256: d19fd5879476ab6ceccd55ba4a4c363b990fd6ae1d1e3a1d996972bc372bfaa1
+  sha256: 9acc820d48d455f49a725307828ef88838407c728b35ab025a10271a2c73c119
 
 build:
   number: 0
@@ -35,7 +35,7 @@ requirements:
     - xarray
     - zarr
     - fsspec
-    - s3fs ==2021.10.1
+    - s3fs ==2021.11.0
     - requests
     - aiohttp
     - typing-extensions ~=3.10
