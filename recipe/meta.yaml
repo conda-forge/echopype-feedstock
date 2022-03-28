@@ -9,7 +9,7 @@ source:
   sha256: 9acc820d48d455f49a725307828ef88838407c728b35ab025a10271a2c73c119
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script:
     - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}    # [unix]
@@ -25,6 +25,7 @@ requirements:
   run:
     - python >=3.6
     - matplotlib-base
+    - cmocean
     - dask
     - netCDF4
     - numpy
