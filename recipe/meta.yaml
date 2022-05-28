@@ -26,19 +26,17 @@ requirements:
     - python >=3.6
     - matplotlib-base
     - dask
+    - jinja2
     - netCDF4
     - numpy
-    - pandas
     - pynmea2
     - pytz
     - scipy
     - xarray
     - zarr
     - fsspec
-    - s3fs ==2021.11.0
-    - requests
-    - aiohttp
-    - typing-extensions ~=3.10
+    - s3fs
+    - xarray-datatree ==0.0.4
 
 test:
   imports:
