@@ -1,4 +1,4 @@
-{% set version = "0.5.6" %}
+{% set version = "0.6.0" %}
 
 package:
   name: echopype
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/e/echopype/echopype-{{ version }}.tar.gz
-  sha256: 9acc820d48d455f49a725307828ef88838407c728b35ab025a10271a2c73c119
+  sha256: 535516810e839123a60fa21e6baf345c72f421449d4980334e6ad9999641fb1e
 
 build:
   number: 0
@@ -26,19 +26,17 @@ requirements:
     - python >=3.6
     - matplotlib-base
     - dask
+    - jinja2
     - netCDF4
     - numpy
-    - pandas
     - pynmea2
     - pytz
     - scipy
     - xarray
     - zarr
     - fsspec
-    - s3fs ==2021.11.0
-    - requests
-    - aiohttp
-    - typing-extensions ~=3.10
+    - s3fs
+    - xarray-datatree ==0.0.4
 
 test:
   imports:
