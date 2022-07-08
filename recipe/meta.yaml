@@ -19,7 +19,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.8
     - setuptools >=45
     - setuptools_scm >=3.4
   run:
@@ -36,7 +36,7 @@ requirements:
     - zarr
     - fsspec
     - s3fs
-    - xarray-datatree ==0.0.4
+    - xarray-datatree ==0.0.6
 
 test:
   imports:
