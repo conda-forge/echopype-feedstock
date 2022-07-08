@@ -37,6 +37,7 @@ requirements:
     - fsspec
     - s3fs
     - xarray-datatree ==0.0.6
+    - cmocean
 
 test:
   imports:
