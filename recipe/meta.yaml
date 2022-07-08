@@ -1,4 +1,4 @@
-{% set version = "0.6.0" %}
+{% set version = "0.6.1" %}
 
 package:
   name: echopype
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/e/echopype/echopype-{{ version }}.tar.gz
-  sha256: 535516810e839123a60fa21e6baf345c72f421449d4980334e6ad9999641fb1e
+  sha256: ffbb2f19ee32801d63dccb1db18999ccd4ab08dc038fce9d0d62a0526fd59840
 
 build:
   number: 0
@@ -19,7 +19,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.8
     - setuptools >=45
     - setuptools_scm >=3.4
   run:
@@ -36,7 +36,8 @@ requirements:
     - zarr
     - fsspec
     - s3fs
-    - xarray-datatree ==0.0.4
+    - xarray-datatree ==0.0.6
+    - cmocean
 
 test:
   imports:
