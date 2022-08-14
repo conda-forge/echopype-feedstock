@@ -1,4 +1,4 @@
-{% set version = "0.6.1" %}
+{% set version = "0.6.2" %}
 
 package:
   name: echopype
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/e/echopype/echopype-{{ version }}.tar.gz
-  sha256: ffbb2f19ee32801d63dccb1db18999ccd4ab08dc038fce9d0d62a0526fd59840
+  sha256: 52f2d90a56e2ebaef16a359ff7804cf0bc4be976bbb17f57462d3825edf39517
 
 build:
   number: 0
@@ -32,12 +32,14 @@ requirements:
     - pynmea2
     - pytz
     - scipy
-    - xarray
+    - xarray ==2022.3.0
     - zarr
     - fsspec
     - s3fs
     - xarray-datatree ==0.0.6
     - cmocean
+    - psutil ==5.9.1
+    - more-itertools ==8.13.0
 
 test:
   imports:
