@@ -27,7 +27,7 @@ requirements:
     - matplotlib-base
     - dask
     - jinja2
-    - netCDF4
+    - netCDF4<1.6
     - numpy
     - pynmea2
     - pytz
@@ -36,6 +36,8 @@ requirements:
     - zarr
     - fsspec
     - s3fs
+    - requests
+    - aiohttp
     - xarray-datatree ==0.0.6
     - cmocean
     - psutil ==5.9.1
