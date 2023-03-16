@@ -1,4 +1,4 @@
-{% set version = "0.6.4" %}
+{% set version = "0.6.4.1" %}
 
 package:
   name: echopype
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/e/echopype/echopype-{{ version }}.tar.gz
-  sha256: 50d5b45296880b9dfb0e515b4fcbd415a11f8c29de529c7103dbdb93a24bbca3
+  sha256: ae03e5b1dc164d588126a5c0b699e89846f3e85338059e1232639490761542be
 
 build:
   number: 0
