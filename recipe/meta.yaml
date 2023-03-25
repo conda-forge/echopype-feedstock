@@ -1,4 +1,4 @@
-{% set version = "0.6.4.1" %}
+{% set version = "0.7.0" %}
 
 package:
   name: echopype
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/e/echopype/echopype-{{ version }}.tar.gz
-  sha256: ae03e5b1dc164d588126a5c0b699e89846f3e85338059e1232639490761542be
+  sha256: d36782fa515841dcaabb3c258401247a8d12a7043bb22d6947864f732922c9b5
 
 build:
   number: 0
@@ -42,6 +42,7 @@ requirements:
     - cmocean
     - psutil ==5.9.1
     - more-itertools ==8.13.0
+    - geopy
 
 test:
   imports:
