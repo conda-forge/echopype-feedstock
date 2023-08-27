@@ -27,9 +27,9 @@ requirements:
     - matplotlib-base
     - dask
     - jinja2
-    - netCDF4 <1.6
+    - netCDF4 >1.6
     - numpy
-    - pandas <2
+    - pandas
     - pynmea2
     - pytz
     - scipy
