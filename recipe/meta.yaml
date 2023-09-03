@@ -19,11 +19,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python >=3.9, <3.11
     - setuptools >=45
     - setuptools_scm >=3.4
   run:
-    - python >=3.6
+    - python >=3.9
     - matplotlib-base
     - dask
     - jinja2
