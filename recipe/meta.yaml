@@ -1,4 +1,4 @@
-{% set version = "0.8.0" %}
+{% set version = "0.8.1" %}
 
 package:
   name: echopype
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/e/echopype/echopype-{{ version }}.tar.gz
-  sha256: cc01b6e53f121bb5a44fc354a8b109013d5f16c573feadc04dfe20330d7836cb
+  sha256: 48abea6f504bd6bbcab287cd311ef6f919913a056981b6b3c9d9f84c631e68a5
 
 build:
   number: 0
@@ -19,11 +19,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python >=3.9
     - setuptools >=45
     - setuptools_scm >=3.4
   run:
-    - python >=3.6
+    - python >=3.9
     - matplotlib-base
     - dask
     - jinja2
