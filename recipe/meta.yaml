@@ -26,6 +26,7 @@ requirements:
     - python >=3.9
     - matplotlib-base
     - dask
+    - flox >=0.7.2,<1.0.0
     - jinja2
     - netCDF4 >1.6
     - numpy
