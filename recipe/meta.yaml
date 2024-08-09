@@ -31,7 +31,7 @@ requirements:
     - flox >=0.7.2,<1.0.0
     - jinja2
     - netCDF4 >1.6
-    - numpy
+    - numpy <2
     - pandas
     - pynmea2
     - pytz
