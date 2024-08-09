@@ -1,4 +1,4 @@
-{% set version = "0.8.4" %}
+{% set version = "0.9.0" %}
 
 package:
   name: echopype
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/e/echopype/echopype-{{ version }}.tar.gz
-  sha256: a166824a83614b4666297a4a68e3dd0729ccb41ac646c70b727b5612433e785f
+  sha256: 115d06eb93cd6adb5eca045ebf6062678a9b5a491ff1e57f62dc0580df194860
 
 build:
   number: 0
@@ -25,11 +25,13 @@ requirements:
   run:
     - python >=3.9
     - matplotlib-base
+    - bottleneck
     - dask
+    - dask-image
     - flox >=0.7.2,<1.0.0
     - jinja2
     - netCDF4 >1.6
-    - numpy
+    - numpy <2
     - pandas
     - pynmea2
     - pytz
