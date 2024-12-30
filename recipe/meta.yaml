@@ -5,11 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/e/echopype/echopype-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/e/echopype/echopype-{{ version }}.tar.gz
   sha256: 115d06eb93cd6adb5eca045ebf6062678a9b5a491ff1e57f62dc0580df194860
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script:
     - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}    # [unix]
@@ -19,11 +19,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools >=45
     - setuptools_scm >=3.4
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - matplotlib-base
     - bottleneck
     - dask
@@ -55,6 +55,7 @@ test:
     - python -c "import echopype; assert echopype.__version__ != '0.0.0'"
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/OSOceanAcoustics/echopype
