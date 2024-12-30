@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/e/echopype/echopype-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/e/echopype/echopype-{{ version }}.tar.gz
   sha256: 8cff928f93ca20137affa4ee9c2c8ab9853eeacd91b2dbbb30757765f02cc973
 
 build:
