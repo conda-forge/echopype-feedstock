@@ -1,4 +1,4 @@
-{% set version = "0.9.1" %}
+{% set version = "0.10.0" %}
 
 package:
   name: echopype
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/e/echopype/echopype-{{ version }}.tar.gz
-  sha256: 8cff928f93ca20137affa4ee9c2c8ab9853eeacd91b2dbbb30757765f02cc973
+  sha256: f23bda230640cf119c7a908d6c4f40939c5320a66072a48d7f653818ccb1c355
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script:
     - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}    # [unix]
