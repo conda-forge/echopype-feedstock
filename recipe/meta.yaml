@@ -30,22 +30,22 @@ requirements:
     - dask-image
     - flox >=0.7.2,<1.0.0
     - jinja2
-    - netCDF4 >1.6
+    - netCDF4 >1.6,<1.7.1
     - numpy <2
     - pandas
     - pynmea2
     - pytz
-    - scipy
-    - xarray
-    - zarr
+    - scipy <1.15.2
+    - xarray >=2024.11.0
+    - zarr >=2,<3
     - fsspec
     - s3fs
     - requests
     - aiohttp
-    - xarray-datatree ==0.0.6
     - cmocean
     - psutil >=5.9.1
     - geopy
+    - typing-extensions
 
 test:
   imports:
