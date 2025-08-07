@@ -1,0 +1,79 @@
+schema_version: 1
+
+context:
+  version: 0.10.1
+
+package:
+  name: echopype
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/e/echopype/echopype-${{ version }}.tar.gz
+  sha256: 7b9263ab0590481f9f6ab5a7876c72e8479f7fb8c9a7988eafb00565c9a101f6
+
+build:
+  number: 1
+  noarch: python
+  script:
+    - if: unix
+      then: export SETUPTOOLS_SCM_PRETEND_VERSION=${{ version }}
+    - if: win
+      then: set SETUPTOOLS_SCM_PRETEND_VERSION=${{ version }}
+    - ${{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools >=45
+    - setuptools_scm >=3.4
+  run:
+    - python >=${{ python_min }},<3.13
+    - matplotlib-base
+    - bottleneck
+    - dask
+    - dask-image
+    - flox >=0.7.2,<1.0.0
+    - jinja2
+    - netCDF4 >1.6,<1.7.1
+    - numpy <2
+    - pandas
+    - pynmea2
+    - pytz
+    - scipy <1.15.2
+    - xarray >=2024.11.0
+    - zarr >=2,<3
+    - fsspec
+    - s3fs
+    - requests
+    - aiohttp
+    - cmocean
+    - psutil >=5.9.1
+    - geopy
+    - typing-extensions
+
+tests:
+  - python:
+      imports:
+        - echopype
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pip check
+      - python -c "import echopype; assert echopype.__version__ != '0.0.0'"
+
+about:
+  license: Apache-2.0
+  license_file: LICENSE
+  summary: Enhancing interoperability and scalability in analyzing water column sonar data.
+  homepage: https://github.com/OSOceanAcoustics/echopype
+  repository: https://github.com/OSOceanAcoustics/echopype
+  documentation: https://echopype.readthedocs.io/en/latest/
+
+extra:
+  recipe-maintainers:
+    - lsetiawan
+    - leewujung
