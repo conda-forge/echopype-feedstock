@@ -23,21 +23,21 @@ requirements:
     - setuptools >=45
     - setuptools_scm >=3.4
   run:
-    - python >={{ python_min }},<3.13
+    - python >={{ python_min }},<3.14
     - matplotlib-base
     - bottleneck
     - dask
     - dask-image
-    - flox >=0.7.2,<1.0.0
+    - flox >=0.7.2
     - jinja2
-    - netCDF4 >1.6,<1.7.1
-    - numpy <2
+    - netCDF4 >1.6
+    - numpy
     - pandas
     - pynmea2
     - pytz
-    - scipy <1.15.2
+    - scipy
     - xarray >=2024.11.0
-    - zarr >=2,<3
+    - zarr >=3
     - fsspec
     - s3fs
     - requests
